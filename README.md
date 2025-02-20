@@ -1,6 +1,6 @@
 # feature-mapping-tutorial
 
-This repository contains code from the paper "Mapping brain function in adults and young children during naturalistic viewing with high-density diffuse optical tomography". 
+This repository contains code from the paper "Mapping brain function in adults and young children during naturalistic viewing with high-density diffuse optical tomography". In particular, this repository contains a tutorial for feature mapping of animated movie clips. This tutorial includes a univariate (correlation) approach to feature mapping and a multivariate (general linear model) approach. Our univariate approach follows methods from "Mapping brain function during naturalistic viewing using high-density diffuse optical tomography" by Fishell et al.. In contrast, the multivariate approach follows "Mapping brain function in adults and young children during naturalistic viewing with high-density diffuse optical tomography" by Tripathy, Fogarty et al. 
 
 ## Data
 Corresponding data for this manuscript is available here: https://www.nitrc.org/frs/?group_id=1563
