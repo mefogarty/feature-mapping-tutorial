@@ -21,7 +21,7 @@
 
 %% Settings:
 addpath(genpath('D:\NeuroDOT')) %NeuroDOT path
- addpath(genpath('D:\movieAnalysisTutorial\FeatureRegressors'));
+addpath(genpath('D:\movieAnalysisTutorial\FeatureRegressors'));
 % addpath(genpath('/data/culver/data1/matlab_codes/NeuroDOT_Internal_Additional_Files_and_Functions')) %NeuroDOT support files path
 % addpath('/data/culver/data1/Morgan/Scripts/movieAnalysisTutorial'); %Path with tutorial script
 % addpath(genpath('/data/culver/data1/dot_gates/regressors/regressor_files/Stim_comp_regressors/')); % This is where the regressors are stored 
@@ -49,14 +49,8 @@ sess = num2str(MovieParticipants{selectedMovieRun,2});
 run = char(MovieParticipants{selectedMovieRun,3});
 clipname = char(MovieParticipants{selectedMovieRun,5});
 
-% Load the info file:
-m1= load([dataDirectory,'\subj-',subject,'\sess-',sess,'\subj-',subject,'-sess-',sess,'-run-',run,'.mat']);
-
-% Load Data: 
-% m1 = LoadVolumetricData(['subj-',subject,'-sess-',sess,'-run-',run,'_HbO'],[dataDirectory,'\subj-',subject,'\sess-',sess,'\'],'nii.gz');
-
-% Correct synch points based on audio
-% [m1.info, movieStartTime] = movieSynchRealign(m1.info,clipname);
+% Load the data and info:
+m1= load([dataDirectory,'\subj-',subject,'\sess-',sess,'\subj-',subject,'-sess-',sess,'-run-',run,'.mat'],'cortex_Hb','info');
 
 % Crop the timetraces to the start and stop of the movie
 mov001 = m1(:,m1.info.paradigm.synchpts(2):m1.info.paradigm.synchpts(3)-1); 
